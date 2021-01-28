@@ -3,7 +3,7 @@
 
     <!-- DataTables Responsive CSS -->
     <link href="../vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
-<!-- Navigation -->      
+<!-- Navigation -->
 	   <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -17,7 +17,7 @@
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right">
-                
+
                 <!-- /.dropdown -->
                 <!-- /.dropdown -->
                 <!-- /.dropdown -->
@@ -42,29 +42,36 @@
                         <li>
                             <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
+
                         <li>
-                            <a href="NewPatchForm.php"><i class="fa fa-file-text fa-fw"></i> New Patch Form</a>
-                        </li>
+                            <a href="#"><i class="fa fa-list-alt fa-fw"></i> Forms<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="NewPatchForm.php">Patch Form</a>
+                                </li>
+                                <li>
+                                    <a href="NewPatchForm.php">Ports & Services Form</a>
+                                </li>
                         <li>
                             <a href="tables.php"><i class="fa fa-table fa-fw"></i> Tables</a>
                         </li>
-                        
+
                         <li>
                             <a href="#"><i class="fa fa-list-alt fa-fw"></i> Patching Checklists<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="checklisttables.php">Automated Checklist</a>
                                 </li>
-								
+
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-book fa-fw"></i> Reports<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                             
+
         </nav>
-		
+
 <script>
     $(document).ready(function() {
         $('#dataTables-example3').DataTable({
