@@ -20,10 +20,10 @@
 
 	</head>
 	<body>
-	
+
 	<div id="morris-donut-chart"></div>
-                     
-	
+
+
 	 <script src="../vendor/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
@@ -40,7 +40,7 @@
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
 	<script>
-	var numInstall = <?php echo '800'; ?>;
+	var numInstall = <?php echo '834'; ?>;
 var numNotInstall = <?php echo '658'?>;
 var numNotApp = <?php echo '902'?>;
 var numMitigation = <?php echo '201'?>;
@@ -57,7 +57,7 @@ var numMitigation = <?php echo '201'?>;
             value: numNotApp
 		}, {
             label: "Mitigated",
-            value: numMitigation	
+            value: numMitigation
         }],
         resize: true
     });
