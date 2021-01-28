@@ -42,8 +42,8 @@
 	<script>
 	var numInstall = <?php echo '800'; ?>;
 var numNotInstall = <?php echo '658'?>;
-var numNotApp = <?php echo '900'?>;
-var numMitigation = <?php echo '20'?>;
+var numNotApp = <?php echo '902'?>;
+var numMitigation = <?php echo '201'?>;
 	Morris.Donut({
         element: 'morris-donut-chart',
         data: [{
