@@ -40,6 +40,9 @@
                         <li>
                             <a href="NewPatchForm.php"><i class="fa fa-file-text fa-fw"></i> New Patch Form</a>
                         </li>
+			    <li>
+                            <a href="NewPatchForm.php"><i class="fa fa-file-text fa-fw"></i> New Ports & Services Form</a>
+                        </li>
                         <li>
                             <a href="tables.php"><i class="fa fa-table fa-fw"></i> Tables</a>
                         </li>
