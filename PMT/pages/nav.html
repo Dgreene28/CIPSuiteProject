@@ -1,236 +1,158 @@
-<!-- DataTables CSS -->
-    <link href="../vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 550px}
 
-    <!-- DataTables Responsive CSS -->
-    <link href="../vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
-<!-- Navigation -->
-	   <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.php">Suite Management Tool</a>
-            </div>
-            <!-- /.navbar-header -->
-<ul class="nav navbar-top-links navbar-left">
-  <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.dropbtn {
-  background-color: #FFFFFF
-  color: black;
-  padding: 10px;
-  font-size: 12px;
-  border: none;
-}
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 10px 12px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {background-color: #ddd;}
-
-.dropdown:hover .dropdown-content {display: block;}
-
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
-</style>
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;}
+    }
+  </style>
 </head>
+<body>
 
-<!--
-  <ul class="nav navbar-top-links navbar-left">
-  <li>
-      <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-
-  </li> -->
-
-
-
-<!--notes
-            <ul class="nav navbar-top-links navbar-left">
-             <ul class="nav nav-dropdown">
-              <li>
-                  <a href="NewPatchForm.php">Patch Form</a>
-              </li>
-              <li>
-                  <a href="NewPortsForm.php">Ports & Services Form</a>
-              </li>
-              <li>
-                  <a href="NewUserForm.php">User Account Form</a>
-              </li>
-                <!-- /.dropdown -->
-                <!-- /.dropdown -->
-                <!-- /.dropdown -->
-                <!-- /.dropdown -->
-<!--notes
-            </ul>
-            </ul>
-
-            <!-- /.navbar-top-links -->
-            <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <style>
-
-            </head>
-
-            <div class="dropdown">
-              <button class="dropbtn">Forms</button>
-              <div class="dropdown-content">
-                <a href="NewPatchForm.php">Device Form</a>
-                <a href="NewPatchForm.php">Software Form</a>
-                <a href="NewPortsForm.php">Ports & Services Form</a>
-                <a href="NewUserForm.php">Firewall Form</a>
-                <a href="NewUserForm.php">User Account Form</a>
-              </div>
-            </div>
-            <div class="dropdown">
-              <button class="dropbtn">Checklist</button>
-              <div class="dropdown-content">
-                <a href="NewPatchForm.php">Linux Checklist</a>
-                <a href="NewPortsForm.php">Windows Checklist</a>
-                <a href="NewUserForm.php">Network Checklist</a>
-              </div>
-            </div>
-            <div class="dropdown">
-              <button class="dropbtn">Reports</button>
-              <div class="dropdown-content">
-                <a href="#">Reporting</a>
-                <a href="tables.php">Tables</a>
-              </div>
-            </div>
-            <div class="dropdown">
-              <button class="dropbtn">Admin</button>
-              <div class="dropdown-content">
-                <a href="#">Settings</a>
-              </div>
-            </div>
+<nav class="navbar navbar-inverse visible-xs">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Dashboard</a></li>
+        <li><a href="#">Age</a></li>
+        <li><a href="#">Gender</a></li>
+        <li><a href="#">Geo</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 
 
-            <ul class="nav navbar-top-links navbar-right">
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav hidden-xs">
+      <h2>Logo</h2>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#section1">Dashboard</a></li>
+        <li><a href="#section2">Age</a></li>
+        <li><a href="#section3">Gender</a></li>
+        <li><a href="#section3">Geo</a></li>
+      </ul><br>
+    </div>
+    <br>
 
-              <li>
-                  <a href="login.html">Logout</a>
-              </li>
-
-            </ul>
-
-
-            <div class="main">
-              <h2>Sidebar</h2>
-
-              <div class="dropdown">
-                <button class="dropbtn">Forms</button>
-                <div class="dropdown-content">
-                  <a href="NewPatchForm.php">Device Form</a>
-                  <a href="NewPatchForm.php">Software Form</a>
-                  <a href="NewPortsForm.php">Ports & Services Form</a>
-                  <a href="NewUserForm.php">Firewall Form</a>
-                  <a href="NewUserForm.php">User Account Form</a>
-                </div>
-
-            <nav id="sidenav">
-
-
-              <ul class="nav nav-pills nav-stacked"><li class="active"><a href="/rhn/YourRhn.do">Overview</a></li>
-            <li class="parent"><a href="/rhn/account/UserDetails.do">Your Account</a></li>
-            <li><a href="/rhn/account/UserPreferences.do">Your Preferences</a></li>
-            <li><a href="/rhn/account/LocalePreferences.do">Locale Preferences</a></li>
-            <li class="parent"><a href="/rhn/multiorg/OrgConfigDetails.do">Your Organization</a></li>
-            <li class="parent"><a href="/rhn/systems/SystemEntitlements.do">Subscription Management</a></li>
-            </ul>
+    <div class="col-sm-9">
+      <div class="well">
+        <h4>Dashboard</h4>
+        <p>Some text..</p>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+            <h4>Users</h4>
+            <p>1 Million</p>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+            <h4>Pages</h4>
+            <p>100 Million</p>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+            <h4>Sessions</h4>
+            <p>10 Million</p>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+            <h4>Bounce</h4>
+            <p>30%</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="well">
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="well">
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="well">
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="well">
+            <p>Text</p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="well">
+            <p>Text</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-            </nav>
-            </body>
-
-
-
-
-          <!--  <div class="navbar-default sidebar" role="navigation">
-                <div class="sidebar-nav navbar-collapse">
-                    <ul class="nav" id="side-menu">
-                        <li class="sidebar-search">
-                            <div class="input-group custom-search-form">
-                                <input type="text" class="form-control" placeholder="Search...">
-                                <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                            </div>
-                             <input-group
-                       </li> -->
-
-<!--notes
-                        <li>
-                            <a href="#"><i class="fa fa-list-alt fa-fw"></i> Forms<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="NewPatchForm.php">Patch Form</a>
-                                </li>
-                                <li>
-                                    <a href="NewPortsForm.php">Ports & Services Form</a>
-                                </li>
-                                <li>
-                                    <a href="NewUserForm.php">User Account Form</a>
-                                </li>
-
-                                </ul>
-
-
-                        <li>
-                            <a href="#"><i class="fa fa-list-alt fa-fw"></i> Patching Checklists<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="checklisttables.php">Automated Checklist</a>
-                                </li>
-
-                            </ul>
-
-                            <!-- /.nav-second-level -->
-<!--
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-book fa-fw"></i> Reports<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-
-        </nav>
--->
-<script>
-    $(document).ready(function() {
-        $('#dataTables-example3').DataTable({
-            responsive: true
-        });
-    });
-    </script>
-	<script>
-    $(document).ready(function() {
-        $('#dataTables-example4').DataTable({
-            responsive: true
-        });
-    });
-    </script>
-	<!-- DataTables JavaScript -->
-    <script src="../vendor/datatables/js/jquery.dataTables.min.js"></script>
-    <script src="../vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
-    <script src="../vendor/datatables-responsive/dataTables.responsive.js"></script>
+</body>
+</html>
